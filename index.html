@@ -4,35 +4,23 @@
     DEMAND NOTICE 4-33 MOTIONED JUNE 19
   </title>
   <link rel="icon" href="https://suntzuping.s3.ap-east-1.amazonaws.com/cialegal.png" type="image/x-icon" />
-  <body style="background-color:rgba(6, 0, 8, 0.951); overflow:auto; max-width: 1964px; " id="modal-canvs"        >
-
-  <script>
-            var target = $(this).data('target');
-  
-  $('myModal').load('/notice.html' + target, function (response, status, xhr) {
-if (status === `success`) {
-
-  var target = $(this).data('target');
-  
-  $('myModal').load('/notice.html' + target, function (response, status, xhr) {
-if (status === `success`) {
-</script>
+  <body style="background-color:rgba(6, 0, 8, 0.951); overflow:auto; max-width: 1964px;">
 
 
 
 
 
     
-<button style="display:none" id="myBtn">Open Modal</button>
+
 
 <style>
   .modal {
     display: show; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
+    z-index: 2; /* Sit on top */
     left: 0;
+    overflow:auto;
     top: 0;
-    overflow-y:scroll;
     width: 100%; /* Full width */
     height: min(100vh -24px, 1600px); /* Full height */
     background-color: rgb(0, 0, 0); /* Fallback color */
@@ -46,11 +34,11 @@ if (status === `success`) {
     max-height: 800px;
     align-self:relative;
     margin-left: auto;
-    overflow-y: auto;
+    overflow-y: scroll;
     margin-right: auto;
     align-items: center;
     align-content: space-around;;
-    z-index:5;
+    z-index:2;
     min-width: 150px;
     width: calc(100wv - 44px);
     height: 800;
@@ -63,7 +51,8 @@ if (status === `success`) {
     max-width: 900px;
     align-self:center;
     align-items: center;
-    z-index:5;
+    z-index:3;
+    overflow-y:scroll
     min-width: 150px;
     
   }
@@ -73,7 +62,8 @@ if (status === `success`) {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    z-index: 5;
+    z-index: 3;
+    overflow: scroll;
     width: 80%; /* Could be more or less, depending on screen size */
   }
 
@@ -100,12 +90,13 @@ if (status === `success`) {
     
     <script>
 
-      const timeNow = Date().timeNow();
+      const timeNow  = new Date();
+
 
       const shape = {
         size: [
            Date('July 20 2022 05:00 CST'),
-           timeNow],
+           timeNow.timeNow],
 
         calculateArea: ()  => {
 
@@ -251,58 +242,9 @@ if (status === `success`) {
       <ul></ul>
     </li>
   </div>
-  </div>
-</div>
 
 
 
-// <script>
-
-// closbtn.onclick = function() {
-//   modal.style.display = "none";
-
-// }
-// $(`#myModal`).click(function(){
-//     const modal_id= '#myModal'
-//     // Push the modal markup into the DOM
-//    //s $('#body').append(customModal);
-    
-// // console.log("hi")
-// //     // Now that it's in the DOM we can find it and bind an event handler
-// //     $(modal_id).on('hidden', function () {
-// //         $(this).remove();
-// //     });
-
-//     // Continue with other init tasks
-//     $(this).find('1').clone().appendTo(`.${modal_id} .modal-header`);
-//     $(this).find('.device-product, .device-details').clone().appendTo( `${modal_id} .modal-body`);
-//     $(`${modal_id}.hide`).show();
-//     $(`${modal_id}`).modal();
-    
-//    $(`${modal_id}`).modal('display');
-// // $('#closbtn').click(function(){
-// //     const modal_id= '#myModal'
-// //     // Push the modal markup into the DOM
-// //     // $('#body').append(customModal);
-// //     $(`${myModal}`).hide();
-
-// //     // Now that it's in the DOM we can find it and bind an event handler
-// //     $('.').on('hidden', function () {
-// //         $(this).remove();
-// //     });
-
-// //     // Continue with other init tasks
-// //     $(this).find('h2').clone().appendTo(`.${modal_id} #modal-h1`);
-// //     $(this).find('.device-product, .device-details').clone().appendTo( `${modal_id} #modal-main`);
-// //     $(`${modal_id}.hide`).show();
-// //     $(`${modal_id}`).modal();
-// // });
-})
-
-</script>
-</div>
-
-    </div>
       <link rel="stylesheet" href="https://use.typekit.net/ztf3ipe.css">
         <div style="max-width: 490px;  min-width:200px; width: min(calc(100vw - 24px), 2536px); height:auto; padding-left:6px; padding-right:6px; margin-left: auto; margin-right: auto; 
         align-self: center; align-items: stretch; align-content: center; text-align: center;">
