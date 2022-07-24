@@ -11,18 +11,15 @@
       font-size: inherit;
       color: inherit;
       font-weight: 200;
-      opacity:88%;
+      opacity:100%;
       max-width: inherit;
-      overflow-x:clip;
-      overflow-y:hidden;;
-      z-index: 4;
+      overflow:hidden;
+      z-index: 3000;
       position: absolute;
     }
     body:hover{
-      opacity:100%;
-      overflow-y:auto;
-      overflow-x:clip;
-
+      color:rgb(255, 45, 255);
+      overflow: auto;
     }
 
 
@@ -35,6 +32,10 @@
       font-weight: 500;
       font-family: chandler-42-regular, sans-serif;
       overflow: hidden;
+    }
+   h1:hover, h2:hover, h3:hover {
+      overflow: auto;
+      background-color: #00030b;
     }
 
     p,
@@ -61,17 +62,20 @@
       margin-left: auto;
       max-width: 1200px;
       min-width: 500px;
-      overflow-y: auto;
+      overflow-y: scroll;
       padding-left: 2rem;
       padding-right: 2rem;
       align-items: flex-start;
     }
     .body div:hover{
-      overflow-y:auto;
+      overflow-y:scroll;
+      background-color: #000301;
+      z-index: 3001;
     }
     .body div {
       max-width: 1200px;
-      z-index: 1;
+      z-index: 3001;
+      background-color: #0011092c;
       overflow-y: hidden;
       padding-left: 2rem;
       font-color: rgb(0, 255, 200);
@@ -125,6 +129,11 @@
       font-color: red;
       max-width: 888px;
       width: calc(100vw - 48px)
+    }
+
+    .comment:hover{
+      overflow-y:scroll;
+
     }
 
 
@@ -320,7 +329,7 @@
     .toc {
       position: fixed;
   opacity:11%;
-      z-index: 1000;
+      z-index: 3001;
       background: rgba(3, 0, 23, 0.527);
       left: 4px;
       margin-top: 3rem;
@@ -350,9 +359,10 @@
       text-align: left;
     }
     .toc:hover{
-      overflow-y:auto;
+      overflow-y:scroll;
       overflow-x:hidden;
-      opacity:66%;
+      opacity:100%;
+      background-color: rgb(0, 0, 8);
     }
 
     .toc p {
@@ -375,7 +385,7 @@
       margin-left: 0;
       opacity: 88%;
       list-style: none;
-      z-index: 2;
+      z-index: 3002;
       list-style-position: inside;
       padding-left: 0;
     }
