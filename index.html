@@ -67,12 +67,16 @@
 
     
 <style>
+
+  .modal:hover{
+    overflow-y:scroll;
+  }
   .modal {
     display: show; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
     left: 0;
-    overflow:auto;
+    overflow:hidden;
     top: 0;
     width: 100%; /* Full width */
     height: min(100vh -24px, 1600px); /* Full height */
@@ -80,9 +84,15 @@
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
     max-height: 1800px;
   }
+  #ticket-3-2:hover{
+    overflow-y:scroll;
+    background-color: rgb(255, 0, 0);
+    overflow-x: auto;
+    color:rgb(0, 255, 238)
+  }
   #ticket-3-2{
-    overflow-y: scroll;
-    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow-x: auto;
     min-height: 200px;
     max-height: 800px;
     align-self:relative;
@@ -97,21 +107,19 @@
     height: 800;
 
   }
-  #ticket-3-2{
-    overflow-x: scroll;
-    min-height: 200px;
-    max-height: 800px;
-    max-width: 900px;
-    align-self:center;
-    align-items: center;
-    z-index:3;
-    overflow-y:scroll;
-    min-width: 150px;
-    
-  }
+
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    z-index: 3;
+    overflow: hidden;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  .modal-content:hover {
+    background-color: #ff0000;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
