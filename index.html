@@ -101,8 +101,8 @@
             background: rgba(10, 0, 11, 0.744);
   border-radius: 12px;
   font-style: normal;
-  font-weight: 200;
-  height: ;
+  font-weight: 200px;
+  height: 600px;
   color: rgb(4, 12, 232);
   font-size: medium;
   
@@ -135,30 +135,7 @@
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
     max-height: 1800px;
   }
-  #ticket-3-2:hover{
-    overflow-y:scroll;
-    background-color: rgb(255, 0, 0);
-    overflow-x: auto;
-    color:rgb(0, 255, 238)
-  }
-  #ticket-3-2{
-    overflow-y: hidden;
-    overflow-x: auto;
-    min-height: 200px;
-    max-height: 800px;
-    align-self:relative;
-    margin-left: auto;
-    overflow-y: hidden;
-    margin-right: auto;
-    align-items: center;
-    align-content: space-around;;
-    z-index:2;
-    min-width: 150px;
-    width: calc(100v - 44px);
-    height: 800px;
-
-  }
-
+ 
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
@@ -247,81 +224,90 @@ window.onclick = function(event) {
 
 <style>
   #modal-ticket{
-    max-width: 1200px; margin-left:auto;
-     margin-right:auto; padding-top: 3px; justify-self: center; justify-content: space-around; justify-items: center; padding-left:2em; padding-right:2em;
+    max-width: min(100wv, 1200px); margin-left:auto;
+     margin-right:auto; padding-top: 3px; justify-self: center; 
+     justify-content: space-around; justify-items: center;
+      padding-left:2em; padding-right:2em;
      overflow-y:hidden;
      overflow-x:clip;
-     z-index: 1;
+     z-index: 0;
+     height: 100vh;;
+     max-height: min(1080px, 100vh);
+
   }
   #modal-ticket:hover{
-    overflow-y:auto;
+    overflow-y:scroll;
     overflow-x:hidden;
     z-index: 1;
   }
+
+  
+  #background-ticket{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    min-width: 100px;
+     min-height: 200px;
+    width: 1040px;
+    height:100vh;
+    max-width: inherit;
+    z-index: 1;
+    max-height: inherit;
+  }
+
 </style>
 
   <blockquote class="context-quote-child-ticket">
     <style>
       .ZENDESK-3{
         text-size-adjust: inherit;
---dynamic-font-scale: 1;
+--dynamic-font-scale: 2;
 color-scheme:inherit;
 z-index: 1;
 --vh: 11.42px;
 line-height: 1.2;
 direction: ltr;
 -webkit-tap-highlight-color: transparent;
-font-size: xx-small;
+font-size: 14pt;
 font-family: 'ethnocentric', Arial, sans-serif;
 font-weight: initial;
 margin: 2rem;
 text-size-adjust: 100%;
---dynamic-font-scale: 1;
---vh: 11.42px;
-line-height: 1.4;
-direction: ltr;
--webkit-tap-highlight-color: transparent;
 margin: 0px;
 padding: 1px;
 background:inherit;
-opacity: 98%;
 align-self: center;
 margin-left: auto;
-overflow-x:hidden;
+overflow-x:clip;
 margin-right: auto;
-align-items: stretch;
+align-items: center;
 align-content: space-around;
 border-radius: 27px;
-font-style: normal;
+font-style: inherit;
 font-weight: 200;
 color: rgb(4, 12, 232);
 font-size: small;
-        max-height: 800px;
-        height: min(800px, 100vh);
+        max-height: inherit;
+        width: 100%;
+       height: calc(100vh - 4ex);
         overflow-y: hide;
-        overflow-x: hide;
         scrollbar-arrow-color: chartreuse;
-    width: 100%;; border:1rem; overflow-y: hidden; max-height: 800px;
-    
+  border:1rem; overflow-y: hidden;
+    max-width: inherit;
       }
       .ZENDESK-3:hover{
         overflow-y:scroll;
-        overflow-x: hidden;
+        overflow-x: clip;
       }
     </style>
        <br>
-    <main style="
-          max-width: calc(100wv - 64px);
-          min-width: 100px;
-           max-height: calc( 100vh - 100px);
-           min-height: 50px;
-           z-index: 2;
-           height: 1200px;
-    
-    ">
+    <main class="modal-ticket">
+    <embed class="background-ticket">
+
+   
  
     <iframe class="ZENDESK-3"  src="./ZENDESK-3/index.html" onload="javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight + 24;}(this));" >
     </iframe>
+  </embed>
   </main>
   </blockquote>
   <cite style=" margin-left: auto; margin-right: auto; ;">
