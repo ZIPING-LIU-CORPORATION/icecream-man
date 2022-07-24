@@ -13,13 +13,23 @@
       font-weight: 200;
       opacity:100%;
       max-width: inherit;
-      overflow:hidden;
-      z-index: 3000;
-      position: absolute;
+      overflow-y: auto;
+      z-index: 0;
+      position: relative;
+
+      color: #78a300;
+      font-weight: 200;
+      font-family: 'chandler-42-regular', sans-serif;
+      margin-left: auto;
+      max-width: 1200px;
+      min-width: 500px;
+      overflow-y: auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      align-items: flex-start;
     }
     body:hover{
       color:rgb(255, 45, 255);
-      overflow: auto;
     }
 
 
@@ -31,7 +41,7 @@
       color: #04502b;
       font-weight: 500;
       font-family: chandler-42-regular, sans-serif;
-      overflow: hidden;
+      overflow: auto;
     }
    h1:hover, h2:hover, h3:hover {
       overflow: auto;
@@ -62,26 +72,23 @@
       margin-left: auto;
       max-width: 1200px;
       min-width: 500px;
-      overflow-y: scroll;
+      overflow-y: auto;
+      z-index: 1;
       padding-left: 2rem;
       padding-right: 2rem;
       align-items: flex-start;
     }
-    .body div:hover{
-      overflow-y:scroll;
-      background-color: #000301;
-      z-index: 3001;
-    }
+
     .body div {
       max-width: 1200px;
-      z-index: 3001;
       background-color: #0011092c;
-      overflow-y: hidden;
+      overflow-y: auto;
       padding-left: 2rem;
-      font-color: rgb(0, 255, 200);
+      color: rgb(0, 255, 200);
       margin-left: auto;
       margin-right: auto;
       padding-right: 2rem;
+      z-index: 4;
       align-content: space-around
     }
 
@@ -108,7 +115,7 @@
 
     #comments {
       margin-top: 15px;
-      max-width: 888px;
+      max-width: 1024px;
       width: calc(100vw - 48px);
     }
 
@@ -119,15 +126,15 @@
     .comment {
       padding-left: 3.05rem;
       padding-right: 1rem;
-      max-width: 888px;
-      font-color: blue;
+      max-width: 1000px;
+      overflow-y: auto;
+      color: rgb(0, 255, 242);
       width: calc(100vw - 48px)
     }
     #comment_first {
       padding-left: 1.05rem;
       padding-right: 0.5rem;
-      font-color: red;
-      max-width: 888px;
+      max-width: 960px;
       width: calc(100vw - 48px)
     }
 
@@ -143,7 +150,7 @@
 
     .comment {
       margin: 10px 0;
-      font-color: yellow;
+      color: yellow;
     }
 
     .comment.first {
@@ -157,7 +164,7 @@
     .comment h4,
     .comment h5,
     .comment h6 {
-      color: rgb(226, 0, 0);
+      color: rgb(255, 0, 85);
       font-weight: 300;
       margin: 5px 0;
       text-transform: none;
@@ -271,7 +278,7 @@
     body[dir='rtl'] #title {
       text-align: right;
 
-      overflow: hidden;
+      overflow: auto;
     }
 
     #logo {
@@ -329,7 +336,7 @@
     .toc {
       position: fixed;
   opacity:11%;
-      z-index: 3001;
+      z-index: 1;
       background: rgba(3, 0, 23, 0.527);
       left: 4px;
       margin-top: 3rem;
@@ -385,7 +392,7 @@
       margin-left: 0;
       opacity: 88%;
       list-style: none;
-      z-index: 3002;
+      z-index: 2;
       list-style-position: inside;
       padding-left: 0;
     }
@@ -607,15 +614,16 @@
   <li><a href="#case-updated-07211418" data-val="four">
       <ul>07-21 19:20<br>
         <span style="font-size: 6.5pt;">Case Update:  Added Additional Ticket Info requested by ERC, [double ledered]  <br>on June 21</span>
-      </ul
-    </a></li>
+      </ul>
+    </a>
+  </li>
   <li><a href="#case-updated-07221418" data-val="five">
       <ul>07-22 14:18<br>
         <span style="font-size: 8pt;">Awaiting ERC RESPONSE,  Followup Reminder, on June 22</span>
       </ul>
     </a></li>
   <svg height="calc( 100vh - 48px)" width="max(calc(100vw * 0.10), 48px)" class="toc-marker"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="https://www.w3.org/2000/svg">
     <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round"
       stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
   </svg>
@@ -626,7 +634,7 @@
   <div id="header">
     <div id="logo">
       <svg>
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/zendesk-support-logo.svg#support"></use>
+        <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/images/zendesk-support-logo.svg#support"></use>
       </svg>
     </div>
     <h2 id="title" dir="auto">#3 Concern</h2>
@@ -635,9 +643,9 @@
 
   <div id="info">
     <div class="name_value">
-      <h4>Submitted</h4>
+      <h4>Regarding US Payroll Ticket ID: <a href="https://adamselipsky.cn/3">adamselipsky.cn/3</a></h4>
       <p><time datetime="2022-07-16 14:48:06 -0600" pubdate="">July 16 via Zendeskping.love - Regarding Concerns since
-          Original Request of: April 4th 2022</time></p>
+          Original Request of: May 4th 2022</time></p>
     </div>
     <div class="name_value">
       <h5>Received via</h5>
@@ -698,10 +706,10 @@
   </div>
 
 
-  <div id="comments" style="text-decoration: none;">
+  <div id="comments" style="text-decoration: none;" class="modal">
     <object id="toc">
       
-      <li id="case-updated-07221418">
+      <li id="case-updated-07221418" class="modal-content">
         <div class="comment first">
                
           <div class="mast">
@@ -813,7 +821,7 @@
         </div>
       </li>
 
-      <li id="case-updated-07211418">
+      <li id="case-updated-07211418" class="modal-content">
         <div class="comment first">
 
           
@@ -6598,7 +6606,7 @@
             </div>
         </div>
       </li>
-      <li id="case-updated-0731920">
+      <li id="case-updated-0731920" class="modal-content">
         <div class="comment">
           <ul>
             <div id=":1pe" class="a3s aiL ">
@@ -7776,7 +7784,7 @@
             </div>
         </div>
       </li>
-      <li id="case-updated-07161920">
+      <li id="case-updated-07161920" class="modal-content">
         <div class="comment">
           <ul>
             <div class="mast">
@@ -8441,7 +8449,7 @@
           </ul>
         </div>
       </li>
-      <li id="case-updated-07171023">
+      <li id="case-updated-07171023" class="modal-content">
 
         <div class="comment">
           <ul>
@@ -10556,7 +10564,7 @@
           </ul>
         </div>
       </li>
-      <li id="case-updated-07171023">
+      <li id="case-updated-07171023" class="modal-content">
         <div class="comment">
           <ul>
             <div class="mast">
@@ -10571,7 +10579,7 @@
           </ul>
         </div>
       </li>
-      <li id="case-updated-07171108">
+      <li id="case-updated-07171108" class="modal-content">
 
         <div class="comment">
           <div class="mast">
@@ -11016,7 +11024,7 @@
           </div>
         </div>
       </li>
-      <li id="case-updated-07171116">
+      <li id="case-updated-07171116" class="modal-content">
         <div class="comment">
           <div class="mast">
             <a href="#case-updated-07171116><span class=" author">CEO at Amazon Services NA, Ziping Liu</span>
