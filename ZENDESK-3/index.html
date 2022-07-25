@@ -15,7 +15,7 @@
       font-size: inherit;
       color: inherit;
       font-weight: 200;
-      padding-left: 11px;
+      padding-left: 2rem;
       opacity:100%;
       max-width: min(1500px, 100vw);
       overflow-y: auto;
@@ -80,19 +80,19 @@
       font-weight: 300;
       font-family: 'ethnocentric', sans-serif;
       max-width: min(1600px, 100vw);
-      min-width: 200px;
+      min-width: 500px;
       overflow-y: auto;
       left: 8rem;
       right: 0;
       overflow-x: clip;
-      width: 94%;;
+      width: 1600px;
       z-index: 1;
       padding-right: 1px;
       align-items: flex-start;
     }
 
     .body div {
-      max-width: 96%;
+      max-width:min(1500px, 100vw);
       background-color: #0011092c;
       overflow-y: hidden;
       left: 8rem;
@@ -101,8 +101,8 @@
       color: rgb(0, 255, 200);
       margin-left: 6rem;
       padding-right: 12px;
-      min-width: 200px;
-      width: 90%;
+      min-width: inherit;
+      width: 1500px;
       z-index: 4;
       align-items: baseline;
       align-content: flex-end;
@@ -129,8 +129,8 @@
 
     .mast {
       margin-bottom: 8px;
-      max-width: inherit;
-      width: 96%;
+      max-width: 1200px;
+      width: 1400px;
     }
 
     #comments {
@@ -168,7 +168,7 @@
 
     }
     .nav{
-      max-width: 95%;
+      max-width: 1600px;
     }
 
     .comment:hover{
@@ -305,8 +305,6 @@
       border-top: 2px solid rgba(64, 255, 223, 0.612);
     }
 
-    
-
     #title {
       margin: 10px;
       text-align: left;
@@ -369,64 +367,49 @@
       float: left;
     }
 
-</style>
-</div>
-</head>
-<body>
-  <div id="header">
-    <div id="logo">
-      <svg>
-        <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/images/zendesk-support-logo.svg#support"></use>
-      </svg>
-    </div>
-    <h2 id="title" dir="auto">#3 Concern</h2>
-  </div>
 
-  <style>
     .toc {
       position: fixed;
   opacity:33%;
-      z-index: 3;
+      z-index: 1;
       background: transparent;
       margin-top: 0.5rem;
-      border-radius: 12px;
-      list-style:-moz-repeating-radial-gradient();
-      list-style-position:inside;
+      border-radius: 16px;
+      list-style:georgian;
       padding-left: 0.5rem;
       padding-right: 2px;
       min-width: 48px;
       font-weight: 300;
-      font-family: 'ethnocentric', sans-serif;
       font-size: 12pt;
-      left:0;
-      opacity: 77%;
-      max-width: 100vw;
-      min-width: 60px;
-      width: 150px;
+      left: -1rem;
+      opacity: 50%;
+      max-width: 1500px;
+      width: 130px;
       overflow: hidden;
+      line-height: auto;
       height: calc(100vh - 48px);
       max-height: calc(100vh - 24px);
       padding-top: 4rem;
       padding-bottom: 8rem;
       margin-left: calc(0.25rem + 1px);
-      text-align: left;
       align-items: baseline;
-      align-self: left;
-      align-content:stretch;
-      line-height: 1.0;
+      align-self: center;
+      align-content: flex-start;
+      line-height: 1.75;
+      text-align:start;
     }
  
 
 .toc:hover {
-  width:250px;
-  z-index:2;
+  width:200px;
+  font-size: unset;
+  z-index: 1;
   color:unset;
   background:transparent;
-  text-align: left;
-  list-style: -moz-repeating-radial-gradient();
   color:  unset;
-  line-height: 1.6;
-  opacity: 95%;
+  line-height: 0.9;
+  font-size-adjust:  unset;
+  opacity: 100%;
 
 }
 
@@ -675,10 +658,10 @@ nav:hover li ul, nav:hover li  {
 
 
   </script>
-
+</head>
 
 <nav class="toc" href="#toc" data-val="one" id="nav-side">
-  <script src="./do-you-got-some-queries.js"></script>
+  <script src="./../do-you-got-some-queries.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
 
@@ -731,6 +714,19 @@ nav:hover li ul, nav:hover li  {
       stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
   </svg>
 </nav>
+</div>
+
+<body>
+  <div id="header">
+    <div id="logo">
+      <svg>
+        <use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="/images/zendesk-support-logo.svg#support"></use>
+      </svg>
+    </div>
+    <h2 id="title" dir="auto">#3 Concern</h2>
+  </div>
+
+
   <div id="info">
     <div class="name_value">
       <h4>Regarding US Payroll Ticket ID: <a href="https://adamselipsky.cn/3">adamselipsky.cn/3</a></h4>
@@ -1038,7 +1034,7 @@ nav:hover li ul, nav:hover li  {
   #cave:hover{
     overflow-y:scroll;
     background: rgb(18, 0, 9);
-    color:rgb(0, 255, 191);
+    font-color:rgb(0, 255, 191);
     font-weight: 400;
   }
 </style>
