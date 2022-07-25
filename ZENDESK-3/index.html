@@ -7,26 +7,34 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <style type="text/css">
+    html{
+      zoom: 102%;
+    }
     body {
       font-family: 'ethnocentric', sans-serif;
       font-size: inherit;
       color: inherit;
       font-weight: 200;
+      padding-left: 2rem;
       opacity:100%;
-      max-width: inherit;
+      max-width: min(1500px, 100vw);
       overflow-y: auto;
+      overflow-x:clip;
       z-index: 1;
-      position: relative;
-      height: 800px;
-      width: max(100vw, 100%);
+      position: absolute;
+      height: 900px;
+      width: min(1300px, 100vw);
       min-width: 300px;
+
       min-height: 200px;
       max-height: 100vh;
 
 
     }
     body:hover{
-      color:rgb(255, 45, 255);
+      overflow-x:clip;
+      overflow-y:auto;
+      z-index: 0;
     }
 
 
@@ -36,13 +44,13 @@
       margin-bottom: 0px;
       margin-top: 5px;
       color: #04502b;
-      font-weight: 500;
-      font-family: chandler-42-regular, sans-serif;
+      font-weight: 300;
+      font-family: 'ethnocentric', sans-serif;
       overflow: auto;
     }
    h1:hover, h2:hover, h3:hover {
       overflow: auto;
-      background-color: #00030b;
+      background-color: #00030b4a;
     }
 
     p,
@@ -60,33 +68,44 @@
 
     body[dir='rtl'] .date {
       display: inline-block;
+      
     }
 
     .body {
-      color: #78a300;
-      font-weight: 200;
-      font-family: 'chandler-42-regular', sans-serif;
-      margin-left: auto;
-      max-width: 1200px;
+      color: #00aeff;
+      margin-left: 200px;
+      padding-left: 4rem;
+      text-indent: 4rem;
+      margin-right: 1px;
+      font-weight: 300;
+      font-family: 'ethnocentric', sans-serif;
+      max-width: min(1600px, 100vw);
       min-width: 500px;
       overflow-y: auto;
+      left: 8rem;
+      right: 0;
+      overflow-x: clip;
+      width: 1600px;
       z-index: 1;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-right: 1px;
       align-items: flex-start;
     }
 
     .body div {
-      max-width: 1200px;
+      max-width:min(1500px, 100vw);
       background-color: #0011092c;
       overflow-y: hidden;
-      padding-left: 2rem;
+      left: 8rem;
+
+      padding-left: 24px;
       color: rgb(0, 255, 200);
-      margin-left: auto;
-      margin-right: auto;
-      padding-right: 2rem;
+      margin-left: 6rem;
+      padding-right: 12px;
+      min-width: inherit;
+      width: 1500px;
       z-index: 4;
-      align-content: space-around
+      align-items: baseline;
+      align-content: flex-end;
     }
     .body div:hover {
       overflow-y: scroll;
@@ -110,14 +129,14 @@
 
     .mast {
       margin-bottom: 8px;
-      max-width: 923;
-      width: calc(100vw - 96px)
+      max-width: 1200px;
+      width: 1400px;
     }
 
     #comments {
       margin-top: 15px;
-      max-width: 1024px;
-      width: calc(100vw - 48px);
+      max-width: inherit;
+      width: 90%;
     }
 
     #info,
@@ -127,21 +146,36 @@
     .comment {
       padding-left: 3.05rem;
       padding-right: 1rem;
-      max-width: 1000px;
-      overflow-y: auto;
-      color: rgb(0, 255, 242);
-      width: calc(100vw - 48px)
+      max-width: inherit;
+      overflow-y: hidden;
+      color: rgb(0, 153, 255);
+      background-color: #000d146a;
+      zoom:110%;
+      width: 85%;
     }
     #comment_first {
       padding-left: 1.05rem;
       padding-right: 0.5rem;
-      max-width: 960px;
-      width: calc(100vw - 48px)
+      max-width: inherit;
+      width: 92%;
+    }
+    #comment_first:hover {
+      padding-left: 1.05rem;
+      padding-right: 0.5rem;
+      max-width: inherit;
+      width: 92%;
+      background-color: #00174460;
+
+    }
+    .nav{
+      max-width: 1600px;
     }
 
     .comment:hover{
       overflow-y:scroll;
-
+      width: 85%;
+      zoom: 110%;
+      background-color: #000d14b7;
     }
 
 
@@ -336,42 +370,80 @@
 
     .toc {
       position: fixed;
-  opacity:11%;
+  opacity:33%;
       z-index: 1;
-      background: rgba(3, 0, 23, 0.527);
-      left: 4px;
-      margin-top: 3rem;
-      border-radius: 69px;
-      list-style: none;
+      background: transparent;
+      margin-top: 0.5rem;
+      border-radius: 16px;
+      list-style:georgian;
       padding-left: 0.5rem;
       padding-right: 2px;
       min-width: 48px;
-      font-weight: 400;
-      max-width: 222px;
-      width: max(calc(100vw * 0.10), 48px);
-      min-width: 12px;
+      font-weight: 300;
+      font-size: 12pt;
+      left: -1rem;
+      opacity: 50%;
+      max-width: 1500px;
+      width: 130px;
       overflow: hidden;
-
       line-height: auto;
       height: calc(100vh - 48px);
       max-height: calc(100vh - 24px);
       padding-top: 4rem;
       padding-bottom: 8rem;
-      margin-left: calc(0.5rem);
       margin-left: calc(0.25rem + 1px);
       align-items: baseline;
       align-self: center;
-      align-content: center;
-      align-content: space-around;
+      align-content: flex-start;
       line-height: 1.75;
-      text-align: left;
+      text-align:start;
     }
-    .toc:hover{
-      overflow-y:scroll;
-      overflow-x:hidden;
-      opacity:100%;
-      background-color: rgb(0, 0, 8);
-    }
+ 
+
+.toc:hover {
+  width:200px;
+  font-size: unset;
+  z-index: 1;
+  color:unset;
+  background:transparent;
+  color:  unset;
+  line-height: 0.9;
+  font-size-adjust:  unset;
+  opacity: 100%;
+
+}
+
+.toc:hover  ul:hover a:hover p p, .toc:hover li:hover ul:hover p p, .toc:hover  ul:hover a:hover p .nav-details:hover, .toc:hover  ul:hover  .nav-details{
+  zoom: 166%;
+  z-index: 3;
+  opacity: 100%;
+  position: sticky;
+  color:#9dff00;
+  line-height: auto;
+  height: fit-content;
+}
+nav:hover li:hover {
+  z-index: 3;
+  opacity: 100%;
+  height: fit-content;
+  zoom: 133%;
+  line-height: auto;
+  background-color: #04001126;
+  position: relative;
+  font-size: 8pt;
+}
+
+nav:hover li ul, nav:hover li  {
+  z-index: 4;
+  zoom: 92%;
+  height: max-content;
+  color:#0033c078;
+  background:transparent;
+  position: static;
+  opacity: 80%;
+}
+
+
 
     .toc p {
       font-size: 10pt;
@@ -379,11 +451,20 @@
       overflow: auto;
     }
 
+    .toc p p {
+      font-size: 10pt;
+      font-style: oblique;
+      overflow: auto;
+      z-index:3;
+    }
+
     .toc p a {
       font-size: 10pt;
       font-style: unset;
       text-decoration: none;
       color: #00ffe5e4;
+      background-color: inherit;
+      z-index: 4;
     }
 
 
@@ -391,9 +472,9 @@
       padding-top: calc(calc(100vh / 18)+2rem);
       padding-left: none;
       margin-left: 0;
-      opacity: 88%;
+      opacity: inherit;
       list-style: none;
-      z-index: 2;
+      z-index: 5;
       list-style-position: inside;
       padding-left: 0;
     }
@@ -406,6 +487,7 @@
       overflow-y: auto;
       margin-left: 0;
       padding-left: 0;
+      z-index: 5;
       list-style-position: inside;
       padding-left: 0.75rem;
     }
@@ -416,16 +498,18 @@
       font-weight: 200;
       font-style: oblique;
       font-size: inherit;
+      z-index: 6;
       text-decoration: none;
       transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
-    .toc li a span {
+    .toc li a p {
       display: inline-block;
       color: rgb(10, 255, 239);
       font-weight: 300;
       font-style: none;
-      font-size: unset;
+      z-index: 4;
+      font-size: inherit;
       text-decoration: none;
       transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     }
@@ -590,38 +674,39 @@
   </script>
   <p style="color:rgb(247, 49, 187)"> <a href="https://atoz.amazon-services.llc/forte">Case Update Tracker</a> </p>
   <li><a href="#case-updated-07161920" data-val="one">
-    <ul>07-17 11:16 CST<br>
+    <ul><p>07-17 11:16 CST<br>
       <span style="font-size: 3pt;"><br>Case Created<br> on June 16</span>
   </a>
+</p>
   </ul>
 </li>
   <li><a href="#case-updated-07171116" data-val="one">
-      <ul>07-17 11:16 CST<br>
-        <span style="font-size: 3.5pt;"><br>Case Followup Reminder<br> on June 17</span>
-    </a>
+      <ul><p>07-17 11:16 CST<br>
+        <p style="font-size: 3.5pt;"  class="nav-details"><br>Case Followup Reminder<br> on June 17</p>
+    </a></p>
     </ul>
   </li>
   <li><a href="#case-updated-07171108" data-val="two">
-      <ul>07-17 11:08<br>
-        <span style="font-size: 4pt;">Case Update: Added Requested Employee ID and Verification<br> on June 17</span>
-      </ul>
+      <ul> <p>07-17 11:08<br>
+        <p style="font-size: 4pt;" class="nav-details">Case Update: Added Requested Employee ID and Verification<br> on June 17</p>
+      </ul></p>
     </a>
   </li>
   <li><a href="#case-updated-0731920" data-val="three">
-      <ul>07-21 10:23<br>
-        <span style="font-size: 5pt;">Case Update: Added Additional Ticket Info requested by ERC <br>on June 21</span>
-      </ul>
+      <ul><p>07-21 10:23<br>
+        <p style="font-size: 5pt;" class="nav-details" >Case Update: Added Additional Ticket Info requested by ERC <br>on June 21</p>
+      </ul></p>
     </a></li>
   <li><a href="#case-updated-07211418" data-val="four">
-      <ul>07-21 19:20<br>
-        <span style="font-size: 6.5pt;">Case Update:  Added Additional Ticket Info requested by ERC, [double ledered]  <br>on June 21</span>
-      </ul>
+      <ul><p>07-21 19:20<br>
+        <p style="font-size: 6.5pt;" class="nav-details">Case Update:  Added Additional Ticket Info requested by ERC, [double ledered]  <br>on June 21</p>
+      </ul></p>
     </a>
   </li>
   <li><a href="#case-updated-07221418" data-val="five">
-      <ul>07-22 14:18<br>
-        <span style="font-size: 8pt;">Awaiting ERC RESPONSE,  Followup Reminder, on June 22</span>
-      </ul>
+      <ul><p>07-22 14:18<br>
+        <p style="font-size: 8pt;" class="nav-details">Awaiting ERC RESPONSE,  Followup Reminder, on June 22</p>
+      </ul></p>
     </a></li>
   <svg height="calc( 100vh - 48px)" width="max(calc(100vw * 0.10), 48px)" class="toc-marker"
     xmlns="https://www.w3.org/2000/svg">
@@ -741,7 +826,7 @@
                     #auto:hover{
                       border-style: inset;
                     border-color: #ffb84ee7;
-                    background-color: #0e0200;
+                    background-color: #0e020071;
                     border-width: 4px;
                     width: 600px;
                     height: 664px;;
@@ -750,7 +835,7 @@
                     #auto{
                       border-style: outset;
                     border-color: #bc7a00b1;
-                    background-color: #08001a;
+                    background-color: #08001a89;
                     border-width: 4px;
                     width: 600px;
                     overflow:hidden;
@@ -776,60 +861,60 @@
                   <div>My point&nbsp; is, on linked in, it's just acquaintances. I don't use it for friends. I don't even actually connect with them, and if we did, well we literally could care less enough to say hi.</div>
                   <div><br></div>
                   <div>Everybody on there is somebody that sure I know but not a&nbsp; personal friend.</div><div><br></div><div>Because that is to say, my friends in real life have taken notice, and a notice they have never seen. That I don't talk to them anymore but under a very different scenario than getting into an argument.</div><div><br></div><div>And, no I don't go and check at all hey did so and so block me blah blah blah. Why would I care? And in with friends, I'm not going to explain why I dont' dontt at all check or think about if my friends block me.</div><div><br></div><div>I found out randomly, that's it. Bound to happen. ANd not sure if you were trying to make a statement at me, for doing that, but, that is the most&nbsp; very angsty teenager drama level of commucnation I have ever seen from someone at a CEO level...</div><div><br></div><div><br></div><div>Because in the reality, not the social medias...</div><div><br></div><div>What you have done has caused a wave of rippling across my social networks, and obviously it started with just me and you great leaders at Amazon. But you and your actions began to make it more and more about more and more things, more stakeholders and more people.</div><div><br></div><div>No, not from what i did. From what you did. Your actions, and continued actions, are beginning to concern more and more stakeholders .&nbsp;</div><div><br></div><div>You do you know, you are literally, committing corporate blackmail, while everyone is just sitting here, just as dumbfounded as I am,</div><div><br></div><div>It's not like the past events change or become different. Everything that happened in April, still happened. Everything that happened in May, still happened.</div><div><br></div><div><br></div><div>And now, you added a brand new month of exactly what you are doing.</div><div><br></div><div>I have no idea, how you think that you can just do exactly this and regard it as something that's acceptable; a no sweat lost,&nbsp; or wrong in any way. BECAUSE:</div><div>in</div><div>you haven't gotten the Church of&nbsp; XINJIANG with Blinking .State.gov&nbsp; to bless it with it's prayers with some parables printed on a few scrolls, for you to pay off;&nbsp; and just like this, with your chapter of the Church of Xinjiang of amazon Services, you by the power vested in the Church of XINJIANG with BLINKEN, have no wrongs to lose any thought over, grounded as universal truths that everyone one in society automatically believes in union as mandatory given single party state church...</div><div><br></div><div><br></div><div>Anyways, yeah, I am not at all impressed with the performance of Amazon CEO's and Execs ongoing since at the marked data below, that is because you got a performance repot written in May: <a href="https://atoz.amazon-services.llc/" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://atoz.amazon-services.llc/&amp;source=gmail&amp;ust=1658704993006000&amp;usg=AOvVaw0anWFXUcNX2Wgk9-enmqGH">https://atoz.amazon-services.<wbr>llc/</a></div><div><br></div><div>That report was finalized in May, on May 20th.</div><div><br></div><div>It was a verbal warning of employee misconduct and&nbsp; performance issues.... No, it's not funny in anyway. If you <a href="http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c=23593561&amp;l=27685ee6-1099-4587-ad4c-687fd5ff7996&amp;r=e74b883f-5476-4046-8b97-b944ceab5bb2" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c%3D23593561%26l%3D27685ee6-1099-4587-ad4c-687fd5ff7996%26r%3De74b883f-5476-4046-8b97-b944ceab5bb2&amp;source=gmail&amp;ust=1658704993006000&amp;usg=AOvVaw01PTpN3sPwWbpt163CitK7">Caleb.ziping.org</a>, this this is funny, and to chuckle about, well just know Ethics 7 proluge now has 3 parts iinstaed of two., and how 3' parted, events have occured?</div><div><br></div><div>I am not at all impressed with the lack of improvement.</div><br><div>
-                    <div dir="ltr">On Wed, Jun 8, 2022 at 11:01 PM Ziping Liu &lt;<a href="mailto:ceo@amazonwebsite.us" rel="noreferrer" target="_blank">ceo@amazonwebsite.us</a>&gt; wrote:<br></div><blockquote style="border-left-color:rgba(255, 0, 81, 0.775);border-left-style:solid;border-left-width:1px;margin:0px 0px 0px 0.8ex;padding-left:1ex"><div><div style="background-color:rgba(47, 0, 0, 0.912);color:rgb(255, 0, 0)" dir="auto">
+                    <div dir="ltr">On Wed, Jun 8, 2022 at 11:01 PM Ziping Liu &lt;<a href="mailto:ceo@amazonwebsite.us" rel="noreferrer" target="_blank">ceo@amazonwebsite.us</a>&gt; wrote:<br></div><blockquote style="border-left-color:rgba(255, 0, 81, 0.775);border-left-style:solid;border-left-width:1px;margin:0px 0px 0px 0.8ex;padding-left:1ex"><div><div style="background-color:rgba(47, 0, 0, 0.355);color:rgb(255, 0, 0)" dir="auto">
             Okay you see how the three stooges here,</div>
-            <div style="background-color:rgb(39, 0, 3);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
+            <div style="background-color:rgba(39, 0, 3, 0.65);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
             Like have been getting emails about the reality of the situation&nbsp;</div><div style="background-color:rgba(175, 0, 0, 0.678);color:rgb(255, 0, 140)" dir="auto"><br></div><div style="background-color:rgb(45, 0, 0);color:rgb(170, 0, 64)" dir="auto">
             And on June 7 they send me a box and a fucking letter.</div>
-            <div style="background-color:rgba(37, 1, 7, 0.905);color:rgba(255, 0, 0, 0.812)" dir="auto"><br></div><div style="background-color:rgba(59, 0, 30, 0.864);color:rgb(170, 0, 64)" dir="auto">
-            And still they remain silent.</div><div style="background-color:rgb(53, 0, 0);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            I think they are just not men, with honor at all.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            So don't feel bad about your oligarchs Russia.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            These guys are way worse&nbsp;</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            &nbsp;&nbsp;</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            They are stil trying to kill me</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            A real American fighting for justice and peace for the world.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            And here these idiots sit, still lying about</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Medical documentation fraud.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div>
-            <div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(225, 0, 255)" dir="auto">
+            <div style="background-color:rgba(39, 2, 8, 0.011);color:rgba(255, 0, 0, 0.812)" dir="auto"><br></div><div style="background-color:rgba(59, 0, 30, 0.864);color:rgb(170, 0, 64)" dir="auto">
+            And still they remain silent.</div><div style="background-color:rgb(53, 0, 0);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            I think they are just not men, with honor at all.</div><div style="background-color:rgba(28, 0, 5, 0.281);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            So don't feel bad about your oligarchs Russia.</div><div style="background-color:rgba(37, 1, 9, 0.33);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            These guys are way worse&nbsp;</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            &nbsp;&nbsp;</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            They are stil trying to kill me</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            A real American fighting for justice and peace for the world.</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            And here these idiots sit, still lying about</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Medical documentation fraud.</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div>
+            <div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(225, 0, 255)" dir="auto">
             There's no such thing as man in the high castle.</div>
-            <div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
+            <div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
             A real hu<i>man</i>&nbsp;</div>
-            <div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(0, 187, 255)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
+            <div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(0, 187, 255)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
             Knows the high castle is their body.</div>
-            <div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div>
-            <div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(0, 255, 208)" dir="auto">
-            And mind, and soul.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div>
-            <div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 0)" dir="auto">
-            These men, only care about money.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Don't event have the guts to respond to me</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Look at what they did to me</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            I still attempt to forgive them</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            What did they do?</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
+            <div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div>
+            <div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(0, 255, 208)" dir="auto">
+            And mind, and soul.</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div>
+            <div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 0)" dir="auto">
+            These men, only care about money.</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Don't event have the guts to respond to me</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Look at what they did to me</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            I still attempt to forgive them</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            What did they do?</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
             ABSOLUTELY NOTHING These are truly,</div>
-            <div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Creators of ant farms and spirals of death</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            FUCKING PARASITE&nbsp;</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            I'm the Secretary of State of the USA.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Just look at my credentials: <a href="http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c=23593561&amp;l=915f5866-3535-407c-9aab-7f80e8aa9dfa&amp;r=e74b883f-5476-4046-8b97-b944ceab5bb2" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c%3D23593561%26l%3D915f5866-3535-407c-9aab-7f80e8aa9dfa%26r%3De74b883f-5476-4046-8b97-b944ceab5bb2&amp;source=gmail&amp;ust=1658704993006000&amp;usg=AOvVaw0P6a91y2AecyTJ_tHSBbFp">ziping.org</a>, and <a href="http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c=23593561&amp;l=75fd5b50-2f96-483f-bdd2-f7544b305ed3&amp;r=e74b883f-5476-4046-8b97-b944ceab5bb2" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c%3D23593561%26l%3D75fd5b50-2f96-483f-bdd2-f7544b305ed3%26r%3De74b883f-5476-4046-8b97-b944ceab5bb2&amp;source=gmail&amp;ust=1658704993006000&amp;usg=AOvVaw2AJdkWNNmwnpJZpk0voW8q">ziping.org.cn</a></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            And <a href="http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c=23593561&amp;l=744e5c46-415f-40e6-b9ce-169329a56dc5&amp;r=e74b883f-5476-4046-8b97-b944ceab5bb2" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c%3D23593561%26l%3D744e5c46-415f-40e6-b9ce-169329a56dc5%26r%3De74b883f-5476-4046-8b97-b944ceab5bb2&amp;source=gmail&amp;ust=1658704993006000&amp;usg=AOvVaw3DXWinrgZ5MMxrDVh6mdXs">linkedin.com/in/liu</a></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            These fuck faces don't even realize how much credibility they gave me</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            I defeated them.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
+            <div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Creators of ant farms and spirals of death</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            FUCKING PARASITE&nbsp;</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            I'm the Secretary of State of the USA.</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Just look at my credentials: <a href="http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c=23593561&amp;l=915f5866-3535-407c-9aab-7f80e8aa9dfa&amp;r=e74b883f-5476-4046-8b97-b944ceab5bb2" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c%3D23593561%26l%3D915f5866-3535-407c-9aab-7f80e8aa9dfa%26r%3De74b883f-5476-4046-8b97-b944ceab5bb2&amp;source=gmail&amp;ust=1658704993006000&amp;usg=AOvVaw0P6a91y2AecyTJ_tHSBbFp">ziping.org</a>, and <a href="http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c=23593561&amp;l=75fd5b50-2f96-483f-bdd2-f7544b305ed3&amp;r=e74b883f-5476-4046-8b97-b944ceab5bb2" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c%3D23593561%26l%3D75fd5b50-2f96-483f-bdd2-f7544b305ed3%26r%3De74b883f-5476-4046-8b97-b944ceab5bb2&amp;source=gmail&amp;ust=1658704993006000&amp;usg=AOvVaw2AJdkWNNmwnpJZpk0voW8q">ziping.org.cn</a></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            And <a href="http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c=23593561&amp;l=744e5c46-415f-40e6-b9ce-169329a56dc5&amp;r=e74b883f-5476-4046-8b97-b944ceab5bb2" rel="noreferrer" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://deliberate.blindness.of.bad.faith.adamselipsky.cn/x/d?c%3D23593561%26l%3D744e5c46-415f-40e6-b9ce-169329a56dc5%26r%3De74b883f-5476-4046-8b97-b944ceab5bb2&amp;source=gmail&amp;ust=1658704993006000&amp;usg=AOvVaw3DXWinrgZ5MMxrDVh6mdXs">linkedin.com/in/liu</a></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            These fuck faces don't even realize how much credibility they gave me</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            I defeated them.</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
             And now look at them, fucking pitiful.</div>
-            <div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Fantastic in unknowable communications&nbsp;</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Yet so loud in anarchy</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            GoDaddy CEO, why can't these wretched beings pay&nbsp;</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            The 3 MIL usd fines, like how you did right away</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Lik3 a good slave? I know right?</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            And the CIA paid the 1 mil so readily</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Like the good fucking slaves.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            I'm ready to enslave the world</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            What should we do? To these misbehaving&nbsp;</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Chained slaves?</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            Idk, yall figure it out, just get my health insurance back,</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            They are trying to murder me with a cobra of li3s&nbsp;</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
-            I have a world to enslave and conquer.</div><div style="background-color:rgba(37, 1, 7, 0.905);color:rgb(170, 0, 64)" dir="auto">
+            <div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Fantastic in unknowable communications&nbsp;</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Yet so loud in anarchy</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            GoDaddy CEO, why can't these wretched beings pay&nbsp;</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            The 3 MIL usd fines, like how you did right away</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Lik3 a good slave? I know right?</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            And the CIA paid the 1 mil so readily</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Like the good fucking slaves.</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            I'm ready to enslave the world</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            What should we do? To these misbehaving&nbsp;</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Chained slaves?</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            Idk, yall figure it out, just get my health insurance back,</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            They are trying to murder me with a cobra of li3s&nbsp;</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto"><br></div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
+            I have a world to enslave and conquer.</div><div style="background-color:rgba(39, 2, 8, 0.011);color:rgb(170, 0, 64)" dir="auto">
             Fuck off.</div><div dir="auto"><div><br>
             </div>
             Sent from my Verizon, Samsung Galaxy smartphone<br>
@@ -903,8 +988,8 @@
             <div>
 
 
-              <h2 style="margin:0.25in 0in 4pt;font-size:18pt;font-family:'chandler-42-regular',sans-serif; font-weight:300;">
-                <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+              <h2 style="margin:0.25in 0in 4pt;font-size:18pt;font-family: 'ethnocentric',sans-serif; font-weight:300;">
+                <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                   Hey there Sneha,
                 </span>
               </h2>
@@ -912,11 +997,11 @@
             
               <div>
                 <p style="margin:11pt 0in;font-size:11pt;font-family:Calibri,sans-serif">
-                  <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                  <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                 </p>
 
                 <p style="margin:11pt 0in;font-size:11pt;font-family:Calibri,sans-serif">
-                  <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                  <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                     Thank you for moving the process of resolving my concern, I am glad you were s
                     able to retrieve a full record of my wage payments.
                   </span>
@@ -955,17 +1040,17 @@
 </style>
                 <blockquote id="cave">
                   <p style="margin:11pt 0in;font-size:16pt;font-family:'ethnocentric',sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Let me give context to avoid ambiguity in using analogous paths...
                     </span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Amazon, you have dragged me into a cave with you. I am tired of being stuck
                       in. State of limbo in this cave I never wanted to be in. So I have decided
                       to simply walk away, because the way out is obvious.
@@ -973,25 +1058,25 @@
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I am choosing to follow that route, and to look towards a
                     </span>
                     <a href="http://future.ziping.org" style="color:rgb(5,99,193)" target="_blank"
                       data-saferedirecturl="https://www.google.com/url?q=http://future.ziping.org&amp;source=gmail&amp;ust=1658477463520000&amp;usg=AOvVaw2ap0WVckDTCGViA3TJGD0W">
-                      <span style="font-family:'chandler-42-regular',sans-serif">future.ziping.org</span>
+                      <span style="font-family: 'ethnocentric',sans-serif">future.ziping.org</span>
                     </a>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       , because ahead is not just light, for we have already heard the rustling of
                       the air drafts. So rather than trying
                     </span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       a past as my
                       <b>hope</b>
                       I always walk forward unless&nbsp; I absolutely&nbsp; must walk back. So day
@@ -1004,41 +1089,41 @@
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I am simply a lover and not a fighter. And, as cliche as it sounds, I hate
                       being arrogant and a showboat.
                     </span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-sserif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       The truth here is, the life I write down, is still a washed down version of
                       my actual life.
                     </span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Because it just makes me look way too good for my own comfort.
                     </span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
 
 
 
                     </span>
                     </ <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
@@ -1052,7 +1137,7 @@
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                     </span>
                   </p>
 
@@ -1077,7 +1162,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I don't ever want to write about those,
 
                       <span zeum4c40="PR_52_0" data-ddnwab="PR_52_0" aria-invalid="grammar" class="Lm ng">Iit would
@@ -1096,7 +1181,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I have a Quora that speaks directly to the heart and to raw human emotions.
                       But there are those who think they comprehend my psychological profile, and
                       I guess they do...
@@ -1112,7 +1197,7 @@
                         &nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       That's one thing I hate what you Amazon did, you thought you knew who I was,
                       you read my blogs, my emails, my texts,
                     </span>
@@ -1128,12 +1213,12 @@
                       </span>
                     </span>
                     <b>
-                      <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                      <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                         You decided you figured out character traits. personality profile or what
                         have you.
                       </span>
                     </b>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)"></span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)"></span>
                   </p>
 
                   <p
@@ -1145,7 +1230,7 @@
                         &nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       And you went
 
                       int
@@ -1164,7 +1249,7 @@
                         &nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       My belief is strong. As a concept then, it is beyond fucked up. However, it
                       is in actual fact fucked up. For a single email in my life, I will be so
                       proud that I will be able to say, "How dare you!". You dare to put yourself
@@ -1181,7 +1266,7 @@
                         &nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       of understanding and empathy for our world enough that you did even realize
                       what I was made of?
                     </span>
@@ -1197,11 +1282,11 @@
                       </span>
                     </span>
                     <b>
-                      <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(139,19,121)">
+                      <span style="font-family: 'ethnocentric',sans-serif;color:rgb(139,19,121)">
                         but you do know Amazon Legal Here's the God honest truth
                       </span>
                     </b>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)"></span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)"></span>
                   </p>
 
                   <p
@@ -1213,7 +1298,7 @@
                         &nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Before this black mail event, I gave up. I gave up like David Foster
                       Wallace.
                     </span>
@@ -1228,7 +1313,7 @@
                         &nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I saw this world, and I said, I am in the wrong time period, because look at
                       the changing shifts of how power is given value in society.
                     </span>
@@ -1243,7 +1328,7 @@
                         &nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       You adults in the room think "money doesn't buy power" are the words spoken
                       as fables to the fairy child. And you adults in the room, think money,
                       literally a number, an abstraction,
@@ -1259,7 +1344,7 @@
                         &nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Is what determines a human's power.
                     </span>
                   </p>
@@ -1273,7 +1358,7 @@
                         &nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       But you did cause a reaction from Amazon Legal...
                     </span>
                   </p>
@@ -1282,9 +1367,9 @@
                     <a href="https://www.quora.com/Suppose-the-internet-were-a-child-brain-and-we-were-the-neurons-NeUareMoronsB%C2%A1ngEntiRea1yIng-What-would-we-be-teaching-this-child-%E2%88%85newrongs/answer/%E5%AD%90%E5%B9%B3"
                       style="color:rgb(5,99,193)" target="_blank"
                       data-saferedirecturl="https://www.google.com/url?q=https://www.quora.com/Suppose-the-internet-were-a-child-brain-and-we-were-the-neurons-NeUareMoronsB%25C2%25A1ngEntiRea1yIng-What-would-we-be-teaching-this-child-%25E2%2588%2585newrongs/answer/%25E5%25AD%2590%25E5%25B9%25B3&amp;source=gmail&amp;ust=1658477463520000&amp;usg=AOvVaw1OEVYI6VA0sObdeCZbH840">
-                      <span style="font-family:'chandler-42-regular',sans-serif">Answer</span>
+                      <span style="font-family: 'ethnocentric',sans-serif">Answer</span>
                     </a>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">edited by</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">edited by</span>
                     <span style="font-family:'Times New Roman',serif"></span>
                   </p>
 
@@ -1300,23 +1385,23 @@
                     <a href="https://www.quora.com/Suppose-the-internet-were-a-child-brain-and-we-were-the-neurons-NeUareMoronsB%C2%A1ngEntiRea1yIng-What-would-we-be-teaching-this-child-%E2%88%85newrongs"
                       style="color:rgb(5,99,193)" target="_blank"
                       data-saferedirecturl="https://www.google.com/url?q=https://www.quora.com/Suppose-the-internet-were-a-child-brain-and-we-were-the-neurons-NeUareMoronsB%25C2%25A1ngEntiRea1yIng-What-would-we-be-teaching-this-child-%25E2%2588%2585newrongs&amp;source=gmail&amp;ust=1658477463520000&amp;usg=AOvVaw0YeNOw11VTTvaC6An97qeB">
-                      <span style="font-family:'chandler-42-regular',sans-serif">
+                      <span style="font-family: 'ethnocentric',sans-serif">
                         Suppose the internet were a child brain, and we were the "neurons"
                         {NeUareMoronsB¡ngEntiRea1yIng}<wbr>? What would we be teaching this child? {
                       </span>
                       <span style="font-family:'Cambria Math',serif">∅</span>
-                      <span style="font-family:'chandler-42-regular',sans-serif">newrongs? }?</span>
+                      <span style="font-family: 'ethnocentric',sans-serif">newrongs? }?</span>
                     </a>
                   </p>
 
                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Hypothetically speak…
                     </span>
                   </p>
 
                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I don’t even know you are. are, and you could have been anyone... You will
                       never know what you just did for me. Right Now.
                     </span>
@@ -1324,14 +1409,14 @@
 
                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
                     <b>
-                      <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                      <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                         Thank you for your q…
                       </span>
                     </b>
                   </p>
 
                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       … (view more)
                     </span>
                   </p>
@@ -1339,31 +1424,31 @@
                   <p style="margin:11pt 0in 11pt 102pt;font-size:16pt;font-family:Calibri,sans-serif">
                     <a href="https://www.quora.com/log/revision/2094776409" style="color:rgb(5,99,193)" target="_blank"
                       data-saferedirecturl="https://www.google.com/url?q=https://www.quora.com/log/revision/2094776409&amp;source=gmail&amp;ust=1658477463520000&amp;usg=AOvVaw1RA8z8SFWCVKX3PPqtopoO">
-                      <span style="font-family:'chandler-42-regular',sans-serif">#2094776409</span>
+                      <span style="font-family: 'ethnocentric',sans-serif">#2094776409</span>
                     </a>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">·</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">·</span>
                   </p>
 
                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">Thank</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">Thank</span>
                   </p>
 
                   <p style="margin:11pt 0in 11pt 102pt;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">·</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">·</span>
                   </p>
 
                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">Report</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">Report</span>
                   </p>
 
                   <p style="margin:11pt 0in 11pt 102pt;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       · April 16, 2022 at 3:27:59 PM
                     </span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p
@@ -1375,7 +1460,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I was already dead; I was already a dead being. I died sometime in 2018,
                       when I felt simply tired of all
 
@@ -1394,7 +1479,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I literally was just a dead person, who had an image of myself as 69 year
                       old man, and I was just senile and said, I'm waiting simply for the clock to
                       run down.
@@ -1410,7 +1495,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I wasn't in a state of hate or
 
                       <span zeum4c40="PR_55_0" data-ddnwab="PR_55_0" aria-invalid="grammar" class="Lm ng">fear I
@@ -1426,12 +1511,12 @@
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                     <span style="font-family:'Times New Roman',serif"></span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Well AMAZON LEGAL?&nbsp; You went into a level of childish tantrums I have
                       never before seen. TO a point where
 
@@ -1446,7 +1531,7 @@
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       of actinic in a delusive cycle over and over again.
                     </span>
                   </p>
@@ -1460,7 +1545,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       My world was lit up by you, and I was neither scared nor alarmed, but I was
                       immensely shocked, surprised, and mostly angry at the outrageous levels of
                       men upstairs panning wands and hitting every single button they could reach.
@@ -1476,7 +1561,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Yup, so I couldn't let it slide. In addition, you have heard more than
                       enough from Andy Jassy ...&nbsp; Let's cut to the cheese,&nbsp; this is just
                       a rhetorical
@@ -1498,14 +1583,14 @@
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Hey, I'm not an everyday man, so this isn't irritating or traumatic to me.
                       My life has been
                     </span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       Hey, I am not an everyday man, to me this isn't annoying at all&nbsp;
                       traumatic. thAnd I have been through some very real trauma.&nbsp; I
 
@@ -1547,7 +1632,7 @@
                   </p>
 
                   <p class="MsoNormal" style="margin:11pt 0in;font-size:12pt;font-family:Calibri,sans-serif">
-                    <span style="font-size:16pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-size:16pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I worked with a therapist and yeah, I got
 
                       <span zeum4c40="PR_68_0" data-ddnwab="PR_68_0" aria-invalid="spelling"
@@ -1560,7 +1645,7 @@
                   </p>
 
                   <p class="MsoNormal" style="margin:11pt 0in;font-size:12pt;font-family:Calibri,sans-serif">
-                    <span style="font-size:16pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-size:16pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       But I never felt so
 
                       <span zeum4c40="PR_69_0" data-ddnwab="PR_69_0" aria-invalid="spelling"
@@ -1598,14 +1683,14 @@
                   </p>
 
                   <p class="MsoNormal" style="margin:11pt 0in;font-size:12pt;font-family:Calibri,sans-serif">
-                    <span style="font-size:16pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-size:16pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       &nbsp;
                     </span>
                     <span style="font-family:'Times New Roman',serif"></span>
                   </p>
 
                   <p class="MsoNormal" style="margin:11pt 0in;font-size:12pt;font-family:Calibri,sans-serif">
-                    <span style="font-size:16pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-size:16pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I realized that I had it in a form known as occurring more than usual in the
                       subconscious mind, relatedly subconscious racism is a real thing as well.
                     </span>
@@ -1617,7 +1702,7 @@
                   </p>
 
                   <p class="MsoNormal" style="margin:11pt 0in;font-size:12pt;font-family:Calibri,sans-serif">
-                    <span style="font-size:16pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-size:16pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       But I was like but, then that
 
                       <span zeum4c40="PR_76_0" data-ddnwab="PR_76_0" aria-invalid="grammar" class="Lm ng">means,
@@ -1631,7 +1716,7 @@
                   </p>
 
                   <p class="MsoNormal" style="margin:11pt 0in;font-size:12pt;font-family:Calibri,sans-serif">
-                    <span style="font-size:16pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-size:16pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       available blame or shouderable burden to shake off toward, regarding issues
                       seen from one’s own life.
                     </span>
@@ -1639,7 +1724,7 @@
                   </p>
 
                   <p class="MsoNormal" style="margin:11pt 0in;font-size:12pt;font-family:Calibri,sans-serif">
-                    <span style="font-size:16pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-size:16pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       But I said, well, I'm scared. It's like I have been riding the bike all my
                       life with training wheels and never knew it, and wondered <span zeum4c40="PR_77_0"
                         data-ddnwab="PR_77_0" aria-invalid="grammar" class="Lm ng">is it</span> <span zeum4c40="PR_78_0"
@@ -1653,7 +1738,7 @@
                   <ul style="margin-top:0in;margin-bottom:0in" type="disc">
                     <li class="MsoNormal"
                       style="color:rgb(224, 7, 163);margin:12pt 0in 0in;vertical-align:baseline;font-size:12pt;font-family:Calibri,sans-serif">
-                      <span style="font-family:'chandler-42-regular',sans-serif">
+                      <span style="font-family: 'ethnocentric',sans-serif">
                         But then I thought about it. I don;t' have issues with my skin color. I
                         love my body in every way, even with all its flaws, I love my physical
                         body uncoditally.
@@ -1661,7 +1746,7 @@
                     </li>
                     <li class="MsoNormal"
                       style="color:rgb(224, 7, 163);vertical-align:baseline;margin:0in;font-size:12pt;font-family:Calibri,sans-serif">
-                      <span style="font-family:'chandler-42-regular',sans-serif">
+                      <span style="font-family: 'ethnocentric',sans-serif">
                         I don’t have issues with women, they are simply just hamans to me, it’s
                         not that
 
@@ -1674,7 +1759,7 @@
                     </li>
                     <li class="MsoNormal"
                       style="color:rgb(224, 7, 163);vertical-align:baseline;margin:0in;font-size:12pt;font-family:Calibri,sans-serif">
-                      <span style="font-family:'chandler-42-regular',sans-serif">
+                      <span style="font-family: 'ethnocentric',sans-serif">
                         I don't have issues with stereotypes. I enjoy using tem all the time, andI
                         use them as a way to know who to stay away from in my life in business
                         relations or personal relations
@@ -1687,11 +1772,11 @@
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       But I said, well,
 
                       <span zeum4c40="PR_82_0" data-ddnwab="PR_82_0" aria-invalid="grammar" class="Lm ng">i'm</span>
@@ -1705,7 +1790,7 @@
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p
@@ -1717,7 +1802,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I have no issues with my skin color, I have no issues with women, I have no
                       issues with my image as a woman (LOL), I don't have issues with stereotypes,
                       I use them to decide who to stay away from in business relationships or
@@ -1726,27 +1811,27 @@
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       And I was like Oh, well. Shit but everyone else thinks they ...
                     </span>
                     <span style="font-family:'Times New Roman',serif"></span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
 
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       And then you CALEB CAME ALONG,
                     </span>
                   </p>
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)"><br></span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)"><br></span>
                   </p>
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
                     <span style="font-family:'Comic Sans MS';color:rgb(224, 7, 163)">
@@ -1779,10 +1864,10 @@
                     </span>
                   </p>
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                   </p>
                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I am going to walk out of this tunnel with or without you , the liability
                       associates of Amazon.
                     </span>
@@ -1801,7 +1886,7 @@
                         style="font-size:7pt;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Times New Roman;">
                         &nbsp;</span>
                     </span>
-                    <span style="font-size:16pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-size:16pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       If you, the liability stakeholders of Amazon want to exhaust our state
                       affairs into a stage of court sessions,
                     </span>
@@ -1814,7 +1899,7 @@
                         &nbsp;&nbsp;
                       </span>
                     </span>
-                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                       I will no longer regard amazon, the current employer of ZIping lIu, as an
                       advocate for Ziping Liu’s interests.
                     </span>
@@ -1826,7 +1911,7 @@
                       <span
                         style="font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;font-size:7pt;line-height:normal;font-family:'Times New Roman'">&nbsp;
                         &nbsp; &nbsp; &nbsp; &nbsp; [B.2]&nbsp;</span></span><span
-                      style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">With the terminology of my employer’s
+                      style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">With the terminology of my employer’s
                       role changed, and with the history
 
                       <span zeum4c40="PR_84_0" data-ddnwab="PR_84_0" aria-invalid="grammar" class="Lm ng">fo
@@ -1847,7 +1932,7 @@
                   </p>
                 </blockquote>
               </div>
-              <font color="#4c1130" size="6"><span style="font-family:'chandler-42-regular',sans-serif">[<a
+              <font color="#4c1130" size="6"><span style="font-family: 'ethnocentric',sans-serif">[<a
                     href="http://thefbi.us/goodfaith" target="_blank"
                     data-saferedirecturl="https://www.google.com/url?q=http://thefbi.us/goodfaith&amp;source=gmail&amp;ust=1658477463521000&amp;usg=AOvVaw0KGQdkUk39BJhol4XyIWP_">B.3</a>]
                   Amazon Services NA will be regarded and seen as a responsible party of
@@ -1863,7 +1948,7 @@
                     &nbsp;
                   </span>
                 </span>
-                <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                   To underscore how obvious the term malice applies to Amazon’s role, there is
                   no “unintened malice,” because gross negligence which also describe issues
                   Amazon had with me, ca no longer describe the state of affairs as
@@ -1909,7 +1994,7 @@
               <p></p>
 
               <p style="margin:0in;font-family:Calibri,sans-serif">
-                <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                   <font size="6">&nbsp;</font>
                 </span>
               </p>
@@ -2032,18 +2117,18 @@
 
             </div>
             <p style="margin:0in;font-size:16pt;font-family:Calibri,sans-serif">
-              <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+              <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
             </p>
             <p style="margin:0in;font-size:16pt;font-family:Calibri,sans-serif">
-              <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+              <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
             </p>
             <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-              <span style="font-size:12pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+              <span style="font-size:12pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                 <br clear="all" style="break-before:page">
               </span>
             </p>
             <p class="MsoNormal" style="margin:0in;font-size:12pt;font-family:Calibri,sans-serif">
-              <span style="font-size:16pt;font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+              <span style="font-size:16pt;font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                 &nbsp;
               </span>
             </p>
@@ -2470,7 +2555,7 @@
                 <br clear="none">
                 <div dir="ltr">
                   <p class="MsoNormal" style="margin:3.75pt 0in 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                    <span style="font-size:10.5pt;font-family:'chandler-42-regular',sans-serif">
+                    <span style="font-size:10.5pt;font-family: 'ethnocentric',sans-serif">
                       AMAZON HR CASE SERVICES TEAM WE HAVE RECEIVED YOUR REQUEST AND WE HAVE
                       CREATED A CASE ID: “3,” PLEASE UTILIZE THE TICKET CREATED ON YOUR
                       BEHALF: “ID:3” AND PLEASE RESPOND VIA OUR TICKET SYSTEM EITHER BY
@@ -2514,7 +2599,7 @@
                   </div>
                   <ul style="margin-top:0in;margin-bottom:0in">
                     <li style="margin:11.25pt 0in 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                      <span style="font-size:10.5pt;font-family:'chandler-42-regular',sans-serif">
+                      <span style="font-size:10.5pt;font-family: 'ethnocentric',sans-serif">
                         WE have taken extra steps create a dedicated state of the art
                         support enterprise system:
                         <br clear="none">
@@ -2537,7 +2622,7 @@
                       </span>
                     </li>
                     <li style="margin:11.25pt 0in 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                      <span style="font-size:10.5pt;font-family:'chandler-42-regular',sans-serif">
+                      <span style="font-size:10.5pt;font-family: 'ethnocentric',sans-serif">
                         DO NOT WORRY ABOUT REPLYING TO ME USING A NO-REPLY EMAIL ADDRESS
                         FROM AMAZON HR AND EXPECTING ME TO RESPOND TO YOU AND DO NOT WORRY
                         AT ALL ABOUT NOT CREATE A CASE ID AT ALL FOR YOUR CONCERN
@@ -2545,7 +2630,7 @@
                       </span>
                     </li>
                     <li style="margin:11.25pt 0in 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                      <span style="font-size:10.5pt;font-family:'chandler-42-regular',sans-serif">
+                      <span style="font-size:10.5pt;font-family: 'ethnocentric',sans-serif">
                         I HAVE CREATED THIS CASE ID FOR YOU. YOU ARE ALSO ADDED TO MY
                         SUPPORT ENTERPRISE SYSTEM, YOU AMAZON HR HAVE BEEN SENT AN EMAIL
                         INVITE TO ACCESS TICKETS ON OUR SYSTEMS VIA:&nbsp;
@@ -3608,24 +3693,24 @@
 
 
                               <h2 style="margin:0.25in 0in 4pt;font-size:18pt;font-family:Calibri,sans-serif">
-                                <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                   Hey there Sneha,
                                 </span>
                               </h2>
                               <div>
                                 <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                  <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                                  <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                                 </p>
 
                                 <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                  <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                  <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                     Thank you for moving the process of resolving my concern, I am glad you were s
                                     able to retrieve a full record of my wage payments.
                                   </span>
                                 </p>
 
                                 <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                  <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                  <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                     Amazon LEGAL with the context now set with a common point of reality,,&nbsp;
                                     there is now an opening for resolving my warm up concern. As
 
@@ -3644,17 +3729,17 @@
                                 <blockquote
                                   style="margin-left:auto;margin-right:auto;max-width:664px;width:calc(100vw-66px);max-height:500px;min-width:66px;overflow:scroll">
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       Let me give context to avoid ambiguity in using analogous paths...
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       Amazon, you have dragged me into a cave with you. I am tired of being stuck
                                       in. State of limbo in this cave I never wanted to be in. So I have decided
                                       to simply walk away, because the way out is obvious.
@@ -3662,25 +3747,25 @@
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I am choosing to follow that route, and to look towards a
                                     </span>
                                     <a href="http://future.ziping.org" style="color:rgb(5,99,193)" target="_blank"
                                       data-saferedirecturl="https://www.google.com/url?q=http://future.ziping.org&amp;source=gmail&amp;ust=1658477463520000&amp;usg=AOvVaw2ap0WVckDTCGViA3TJGD0W">
-                                      <span style="font-family:'chandler-42-regular',sans-serif">future.ziping.org</span>
+                                      <span style="font-family: 'ethnocentric',sans-serif">future.ziping.org</span>
                                     </a>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       , because ahead is not just light, for we have already heard the rustling of
                                       the air drafts. So rather than trying
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       a past as my
                                       <b>hope</b>
                                       I always walk forward unless&nbsp; I absolutely&nbsp; must walk back. So day
@@ -3694,35 +3779,35 @@
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I am simply a lover and not a fighter. And, as cliche as it sounds, I hate
                                       being arrogant and a showboat.
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       The truth here is, the life I write down, is still a washed down version of
                                       my actual life.
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       Because it just makes me look way too good for my own comfort.
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       My friends who are my friends (as in I actually have friends whatever
 
                                       <span zeum4c40="PR_2_0" data-ddnwab="PR_2_0" aria-invalid="spelling"
@@ -3735,32 +3820,32 @@
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       it doesn't even touch past the surface of&nbsp; my triumphs in life. And I
                                       have gone from hell to back and hell to back again,
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       not because I fell into darkness, because I went down to drag my loved ones
                                       out.&nbsp;
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I don't think I will ever feel comfortable saying it but, I don't think
                                       anyone in the world right now has&nbsp; as good as faith, as my&nbsp;
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       in good-faith, as actioned by me.
                                     </span>
                                   </p>
@@ -3774,7 +3859,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       In terms of the public image, my Quora profile is a profile, it doesn't
                                       showcase me, it shows a slice of me, it's not my whole self.
                                     </span>
@@ -3789,7 +3874,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       All those writings do not touch even 80 percent of my life experiences.
                                     </span>
                                   </p>
@@ -3803,7 +3888,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I don't ever want to write about those,
 
                                       <span zeum4c40="PR_52_0" data-ddnwab="PR_52_0" aria-invalid="grammar"
@@ -3822,7 +3907,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I have a Quora that speaks directly to the heart and to raw human emotions.
                                       But there are those who think they comprehend my psychological profile, and
                                       I guess they do...
@@ -3838,7 +3923,7 @@
                                         &nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       That's one thing I hate what you Amazon did, you thought you knew who I was,
                                       you read my blogs, my emails, my texts,
                                     </span>
@@ -3854,12 +3939,12 @@
                                       </span>
                                     </span>
                                     <b>
-                                      <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                      <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                         You decided you figured out character traits. personality profile or what
                                         have you.
                                       </span>
                                     </b>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)"></span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)"></span>
                                   </p>
 
                                   <p
@@ -3871,7 +3956,7 @@
                                         &nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       And you went
 
                                       int
@@ -3890,7 +3975,7 @@
                                         &nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       My belief is strong. As a concept then, it is beyond fucked up. However, it
                                       is in actual fact fucked up. For a single email in my life, I will be so
                                       proud that I will be able to say, "How dare you!". You dare to put yourself
@@ -3907,7 +3992,7 @@
                                         &nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       of understanding and empathy for our world enough that you did even realize
                                       what I was made of?
                                     </span>
@@ -3923,11 +4008,11 @@
                                       </span>
                                     </span>
                                     <b>
-                                      <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(139,19,121)">
+                                      <span style="font-family: 'ethnocentric',sans-serif;color:rgb(139,19,121)">
                                         but you do know Amazon Legal Here's the God honest truth
                                       </span>
                                     </b>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)"></span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)"></span>
                                   </p>
 
                                   <p
@@ -3939,7 +4024,7 @@
                                         &nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       Before this black mail event, I gave up. I gave up like David Foster
                                       Wallace.
                                     </span>
@@ -3954,7 +4039,7 @@
                                         &nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I saw this world, and I said, I am in the wrong time period, because look at
                                       the changing shifts of how power is given value in society.
                                     </span>
@@ -3969,7 +4054,7 @@
                                         &nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       You adults in the room think "money doesn't buy power" are the words spoken
                                       as fables to the fairy child. And you adults in the room, think money,
                                       literally a number, an abstraction,
@@ -3985,7 +4070,7 @@
                                         &nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       Is what determines a human's power.
                                     </span>
                                   </p>
@@ -3999,7 +4084,7 @@
                                         &nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       But you did cause a reaction from Amazon Legal...
                                     </span>
                                   </p>
@@ -4008,9 +4093,9 @@
                                     <a href="https://www.quora.com/Suppose-the-internet-were-a-child-brain-and-we-were-the-neurons-NeUareMoronsB%C2%A1ngEntiRea1yIng-What-would-we-be-teaching-this-child-%E2%88%85newrongs/answer/%E5%AD%90%E5%B9%B3"
                                       style="color:rgb(5,99,193)" target="_blank"
                                       data-saferedirecturl="https://www.google.com/url?q=https://www.quora.com/Suppose-the-internet-were-a-child-brain-and-we-were-the-neurons-NeUareMoronsB%25C2%25A1ngEntiRea1yIng-What-would-we-be-teaching-this-child-%25E2%2588%2585newrongs/answer/%25E5%25AD%2590%25E5%25B9%25B3&amp;source=gmail&amp;ust=1658477463520000&amp;usg=AOvVaw1OEVYI6VA0sObdeCZbH840">
-                                      <span style="font-family:'chandler-42-regular',sans-serif">Answer</span>
+                                      <span style="font-family: 'ethnocentric',sans-serif">Answer</span>
                                     </a>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">edited by</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">edited by</span>
                                     <span style="font-family:'Times New Roman',serif"></span>
                                   </p>
 
@@ -4022,27 +4107,27 @@
                                     </a>
                                   </p>
 
-                                  <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
+                                  <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt; font-weight: 200; font-family:'ethnocentric',sans-serif">
                                     <a href="https://www.quora.com/Suppose-the-internet-were-a-child-brain-and-we-were-the-neurons-NeUareMoronsB%C2%A1ngEntiRea1yIng-What-would-we-be-teaching-this-child-%E2%88%85newrongs"
                                       style="color:rgb(5,99,193)" target="_blank"
                                       data-saferedirecturl="https://www.google.com/url?q=https://www.quora.com/Suppose-the-internet-were-a-child-brain-and-we-were-the-neurons-NeUareMoronsB%25C2%25A1ngEntiRea1yIng-What-would-we-be-teaching-this-child-%25E2%2588%2585newrongs&amp;source=gmail&amp;ust=1658477463520000&amp;usg=AOvVaw0YeNOw11VTTvaC6An97qeB">
-                                      <span style="font-family:'chandler-42-regular',sans-serif">
+                                      <span style="font-family: 'ethnocentric',sans-serif">
                                         Suppose the internet were a child brain, and we were the "neurons"
                                         {NeUareMoronsB¡ngEntiRea1yIng}<wbr>? What would we be teaching this child? {
                                       </span>
                                       <span style="font-family:'Cambria Math',serif">∅</span>
-                                      <span style="font-family:'chandler-42-regular',sans-serif">newrongs? }?</span>
+                                      <span style="font-family: 'ethnocentric',sans-serif">newrongs? }?</span>
                                     </a>
                                   </p>
 
                                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       Hypothetically speak…
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I don’t even know you are. are, and you could have been anyone... You will
                                       never know what you just did for me. Right Now.
                                     </span>
@@ -4050,14 +4135,14 @@
 
                                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
                                     <b>
-                                      <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                      <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                         Thank you for your q…
                                       </span>
                                     </b>
                                   </p>
 
                                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       … (view more)
                                     </span>
                                   </p>
@@ -4066,31 +4151,31 @@
                                     <a href="https://www.quora.com/log/revision/2094776409" style="color:rgb(5,99,193)"
                                       target="_blank"
                                       data-saferedirecturl="https://www.google.com/url?q=https://www.quora.com/log/revision/2094776409&amp;source=gmail&amp;ust=1658477463520000&amp;usg=AOvVaw1RA8z8SFWCVKX3PPqtopoO">
-                                      <span style="font-family:'chandler-42-regular',sans-serif">#2094776409</span>
+                                      <span style="font-family: 'ethnocentric',sans-serif">#2094776409</span>
                                     </a>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">·</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">·</span>
                                   </p>
 
                                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">Thank</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">Thank</span>
                                   </p>
 
                                   <p style="margin:11pt 0in 11pt 102pt;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">·</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">·</span>
                                   </p>
 
                                   <p style="margin:11pt 0in 11pt 1.25in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">Report</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">Report</span>
                                   </p>
 
                                   <p style="margin:11pt 0in 11pt 102pt;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       · April 16, 2022 at 3:27:59 PM
                                     </span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                                   </p>
 
                                   <p
@@ -4102,7 +4187,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I was already dead; I was already a dead being. I died sometime in 2018,
                                       when I felt simply tired of all
 
@@ -4122,7 +4207,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I literally was just a dead person, who had an image of myself as 69 year
                                       old man, and I was just senile and said, I'm waiting simply for the clock to
                                       run down.
@@ -4138,7 +4223,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       I wasn't in a state of hate or
 
                                       <span zeum4c40="PR_55_0" data-ddnwab="PR_55_0" aria-invalid="grammar"
@@ -4155,12 +4240,12 @@
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">&nbsp;</span>
                                     <span style="font-family:'Times New Roman',serif"></span>
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       Well AMAZON LEGAL?&nbsp; You went into a level of childish tantrums I have
                                       never before seen. TO a point where
 
@@ -4175,7 +4260,7 @@
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       of actinic in a delusive cycle over and over again.
                                     </span>
                                   </p>
@@ -4189,7 +4274,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       My world was lit up by you, and I was neither scared nor alarmed, but I was
                                       immensely shocked, surprised, and mostly angry at the outrageous levels of
                                       men upstairs panning wands and hitting every single button they could reach.
@@ -4205,7 +4290,7 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                       </span>
                                     </span>
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       Yup, so I couldn't let it slide. In addition, you have heard more than
                                       enough from Andy Jassy ...&nbsp; Let's cut to the cheese,&nbsp; this is just
                                       a rhetorical
@@ -4229,7 +4314,7 @@
                                   </p>
 
                                   <p style="margin:11pt 0in;font-size:16pt;font-family:Calibri,sans-serif">
-                                    <span style="font-family:'chandler-42-regular',sans-serif;color:rgb(224, 7, 163)">
+                                    <span style="font-family: 'ethnocentric',sans-serif;color:rgb(224, 7, 163)">
                                       Hey, I'm not an everyday man, so this isn't irritating or traumatic to me.
                                       My life has been
                                     </span>
